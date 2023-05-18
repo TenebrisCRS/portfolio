@@ -1,16 +1,288 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Портфолио Урусова Леонида</title>
+  <link rel="prefetch prerender" href="images/dist/header.webp">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
+
 <body>
+  <header class="header">
+    <div class="header-top">
+      <div class="container">
+        <ul class="header-top__list">
+          <li class="header-top__item">
+            <a class="header-top__link" href="#about">
+              Обо мне
+            </a>
+          </li>
+          <li class="header-top__item">
+            <a class="header-top__link" href="#skills">
+              Навыки
+            </a>
+          </li>
+          <li class="header-top__item">
+            <a class="header-top__link" href="#portfolio">
+              Портфолио
+            </a>
+          </li>
+          <li class="header-top__item">
+            <a class="header-top__link" href="#contacts">
+              Контакты
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <span class="header__icon"></span>
+    <button class="header__btn">
+      <svg class="ham3" viewBox="0 0 100 100" width="80" onclick="this.classList.toggle('active')">
+        <path class="top"
+          d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20" />
+        <path class="middle" d="m 30,50 h 40" />
+        <path class="bottom"
+          d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20" />
+      </svg>
+      <span class="sr-only">Кнопка меню</span>
+    </button>
+
+    <div class="header-bottom">
+      <div class="container">
+        <div class="header-bottom__inner">
+          <h1 class="header-bottom__title">
+            Сайт-портфолио
+          </h1>
+          <h2 class="header-bottom__subtitle">
+            Урусова Леонида
+          </h2>
+          <p class="header-bottom__text">
+            Кандидата на должность HTML-верстальщик
+          </p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="about" id="about">
+      <div class="container">
+        <h2 class="about__title title">
+          Обо мне
+        </h2>
+
+        <div class="about__inner">
 
 
+          <picture class="about__img">
+            <source srcset="images/dist/avatar.avif">
+            <source srcset="images/dist/avatar.webp">
+            <img src="images/dist/avatar.jpg" alt="Фото кандидата" width="360px">
+          </picture>
+
+          <blockquote class="about__blockquote">
+            <p class="about__text">
+              Добрый день! Меня зовут Леонид и мне 21 год.
+            </p>
+            <p class="about__text">
+              Мною была поставлена цель, устроиться в веб-студию на позицию HTML-верстальщика.
+            </p>
+            <p class="about__text">
+              Я целеустремлённый человек, который быстро обучается. Буду рад стать частью вашей команды!)
+            </p>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section class="skills" id="skills">
+      <div class="container">
+        <h2 class="skills__title title">
+          Навыки
+        </h2>
+
+        <div class="skills__inner">
+          <ul class="skills__list">
+            <li class="skills__item">
+              <picture>
+                <source srcset="images/dist/html.avif">
+                <source srcset="images/dist/html.webp">
+                <img class="skills__item-img" src="images/dist/html.jpg" alt="Картинка с логотипом HTML" width="300px" height="100px">
+              </picture>
+
+              <ul class="skills__item-list">
+                <li class="skills__item-skill">
+                  Семантика
+                </li>
+                <li class="skills__item-skill">
+                  Валидность
+                </li>
+                <li class="skills__item-skill">
+                  Методология БЭМ
+                </li>
+                <li class="skills__item-skill">
+                  SVG спрайт
+                </li>
+                <li class="skills__item-skill">
+                  Модульность
+                </li>
+              </ul>
+            </li>
+
+            <li class="skills__item">
+              <picture>
+                <source srcset="images/dist/css.avif">
+                <source srcset="images/dist/css.webp">
+                <img class="skills__item-img" src="images/dist/css.jpg" alt="Картинка с логотипом CSS" width="300px" height="100px">
+              </picture>
+
+              <ul class="skills__item-list">
+                <li class="skills__item-skill">
+                  Flex-box
+                </li>
+                <li class="skills__item-skill">
+                  Grid
+                </li>
+                <li class="skills__item-skill">
+                  SASS(SCSS)
+                </li>
+                <li class="skills__item-skill">
+                  Однонаправленность
+                </li>
+                <li class="skills__item-skill">
+                  Кроссбраузерность
+                </li>
+                <li class="skills__item-skill">
+                  Адаптив
+                </li>
+              </ul>
+            </li>
+            <li class="skills__item">
+              <picture>
+                <source srcset="images/dist/other.avif">
+                <source srcset="images/dist/other.webp">
+                <img class="skills__item-img" src="images/dist/other.webp" alt="Картинка с логотипом CSS" width="300px" height="100px">
+              </picture>
+
+              <ul class="skills__item-list">
+                <li class="skills__item-skill">
+                  Git
+                </li>
+                <li class="skills__item-skill">
+                  Gulp
+                </li>
+                <li class="skills__item-skill">
+                  JQuery
+                </li>
+                <li class="skills__item-skill">
+                  NPM
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="portfolio" id="portfolio">
+      <div class="container">
+        <h2 class="portfolio__title title">
+          Портфолио
+        </h2>
+
+        <ul class="portfolio__list">
+          <li class="portfolio__item">
+            <a class="portfolio__link" target="_blank" href="#">
+              <img class="portfolio__img" width="280" loading="lazy" src="images/dist/porfolio/sensei-media.webp"
+                alt="Картинка с сайтом sensei media">
+            </a>
+          </li>
+          <li class="portfolio__item">
+            <a class="portfolio__link" target="_blank" href="#">
+              <img class="portfolio__img" width="280" loading="lazy" src="images/dist/porfolio/design.webp"
+                alt="Картинка с сайтом design">
+            </a>
+          </li>
+          <li class="portfolio__item">
+            <a class="portfolio__link" target="_blank" href="#">
+              <img class="portfolio__img" width="280" loading="lazy" src="images/dist/porfolio/bowling-master.webp"
+                alt="Картинка с сайтом bowling master">
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="contacts" id="contacts">
+      <div class="container">
+        <h2 class="contacts__title title">
+          Контакты
+        </h2>
+        <div class="contacts__inner">
+          <ul class="contacts__content-list">
+
+            <li class="contacts__content-item">
+              <a class="contacts__link" href="tel:+79854644171">
+                <svg class="svg-icons--phone-dims">
+                  <use xlink:href="images/dist/sprite.svg#icons--phone"></use>
+                </svg>
+                +7(985)464-41-71
+              </a>
+            </li>
+            <li class="contacts__content-item">
+              <a class="contacts__link" href="mailto:uruso.leo@gmail.com">
+                <svg class="svg-icons--email-dims">
+                  <use xlink:href="images/dist/sprite.svg#icons--email"></use>
+                </svg>
+                uruso.leo@gmail.com
+              </a>
+            </li>
+            <li class="contacts__content-item">
+              <ul class="contacts__social-list">
+                <li class="contacts__social-item">
+                  <a class="contacts__social-link" target="_blank" href="https://t.me/Glopec">
+                    <svg class="svg-icons--telegram-dims">
+                      <use xlink:href="images/dist/sprite.svg#icons--telegram"></use>
+                    </svg>
+                    <span class="sr-only">
+                      Ссылка на телеграмм
+                    </span>
+                  </a>
+                </li>
+                <li class="contacts__social-item">
+                  <a class="contacts__social-link" target="_blank" href="https://vk.com/teneb_corvus">
+                    <svg class="svg-icons--vk-dims">
+                      <use xlink:href="images/dist/sprite.svg#icons--vk"></use>
+                    </svg>
+                    <span class="sr-only">
+                      Ссылка на Вконтакте
+                    </span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <div class="contacts__img-wrapper">
+              <picture>
+                <source srcset="images/dist/contacts.avif">
+                <source srcset="images/dist/contacts.webp">
+                <source media="max-width: 400px" srcset="images/dist/contacts-small.webp">
+                <img class="contacts__img" width="500px" loading="lazy" src="images/dist/contacts.jpg"
+                alt="Картинка блока контакты">
+              </picture>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
 
   <script src="js/main.min.js"></script>
 </body>
+
 </html>

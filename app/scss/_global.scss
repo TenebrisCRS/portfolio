@@ -1,7 +1,6 @@
 html,
 body {
   height: 100%;
-
 }
 
 body {
@@ -9,9 +8,9 @@ body {
   font-size: 16px;
   line-height: 1.62;
   @extend %manrope-400;
-  background-color: $bg;
+  background-color: $white;
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
 }
 
 .main {
@@ -27,3 +26,143 @@ body {
 a {
   text-decoration: none;
 }
+
+
+.title {
+  font-size: 50px;
+  line-height: 1.5;
+  @extend %manrope-700;
+
+  margin-bottom: 30px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@keyframes header-icon-animation {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(5px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+
+.header__icon {
+  position: fixed;
+
+  background-image: url('../images/dist/sprite.svg#icons--arrow-down');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  width: 20px;
+  height: 23px;
+  top: -100px;
+  left: calc(50% - 30px);
+  transform: translateX(-50%);
+  z-index: 10;
+  opacity: 0;
+  pointer-events: none;
+
+  transition: opacity 0.3s ease-in-out, top 0.3s ease-in-out;
+
+  &.shown {
+    opacity: 1;
+    top: 10px;
+    animation: header-icon-animation 1.5s infinite;
+  }
+}
+
+
+.header__btn {
+  width: 80px;
+  height: 80px;
+  padding: 0;
+
+  background-color: transparent;
+  cursor: pointer;
+  border-radius: 10px;
+  outline: transparent;
+  border: none;
+
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 20;
+  display: none;
+}
+
+.ham3 {
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 400ms;
+  user-select: none;
+}
+
+.ham3 path {
+  fill: none;
+  transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+  stroke: $accent;
+  stroke-width: 5.5;
+  stroke-linecap: round;
+}
+
+.ham3.active {
+  transform: rotate(45deg);
+}
+
+.ham3 .top {
+  stroke-dasharray: 40 160;
+}
+
+.ham3 .middle {
+  stroke-dasharray: 40 142;
+  transform-origin: 50%;
+  transition: transform 400ms;
+}
+
+.ham3 .bottom {
+  stroke-dasharray: 40 85;
+  transform-origin: 50%;
+  transition: transform 400ms, stroke-dashoffset 400ms;
+}
+
+.ham3.active .top {
+  stroke-dashoffset: -64px;
+}
+
+.ham3.active .middle {
+  transform: rotate(90deg);
+}
+
+.ham3.active .bottom {
+  stroke-dashoffset: -64px;
+}
+
+.svg-icons--phone-dims,
+.svg-icons--email-dims {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  transition: fill 0.3s linear;
+  margin-right: 3px;
+}
+
+
+
