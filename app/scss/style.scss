@@ -366,9 +366,17 @@
       transition: fill 0.3s ease-in-out;
     }
 
+    .svg-icons--github-link-dims {
+      width: 50px;
+      height: 53px;
+      fill: #000000;
+      transition: fill 0.3s ease-in-out;
+    }
+
     &:hover {
       .svg-icons--telegram-dims,
-      .svg-icons--vk-dims {
+      .svg-icons--vk-dims,
+      .svg-icons--github-link-dims {
         fill: $accent;
       }
     }
